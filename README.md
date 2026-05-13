@@ -1,70 +1,52 @@
-#GradeTracker 🎓
+# 🎓 Grade Tracker (Java Swing App)
 
-GradeTracker is a simple Java Swing desktop application for managing students and their grades. It allows you to register students, add grades, view all grades, and calculate averages — with data saved locally in a text file.
-
----
-
-##✨ Features
-📌 Register new students
-➕ Add grades for each student
-🔎 Search students and view details
-📊 Calculate individual averages
-📋 View all grades or all averages
-💾 Persistent storage using a local .txt file
-🎨 Modern dark-themed Swing UI
+A desktop application built with **Java Swing** that allows users to manage students and their grades.  
+It supports registering students, adding grades, searching students, and calculating averages — all with persistent file storage.
 
 ---
 
-##📂 Project Structure
-GradeTracker.java   → Main application (GUI + logic)
-notat.txt           → Auto-generated data file (stored in user home directory)
+## ✨ Features
+
+- 👨‍🎓 Register new students
+- ➕ Add grades (4–10 scale)
+- 🔍 Search student by name
+- 📊 View all grades and averages
+- 📈 Calculate individual and overall averages
+- 💾 File-based data storage (persistent data)
+- 🎨 Modern styled Java Swing GUI
 
 ---
 
-##🚀 How to Run
-1. Requirements
-Java 8 or higher
-Any IDE (IntelliJ IDEA, Eclipse, NetBeans) or terminal
-2.Compile
+## 🖥️ Interface Overview
+
+The application is divided into three main sections:
+
+### 🟦 Top Panel
+- Register new students
+- Add grades for existing students
+- Search students
+
+### 🟩 Center Panel
+- Displays student information
+- Shows grades, sum, and average
+
+### 🟨 Bottom Panel
+- View all averages
+- View all stored grades
+
+---
+
+### 💾 Data Format
+- StudentName:8,9,10
+- John:7,8,9
+- Anna:10,9
+
+---
+
+## 🚀 How to Run
+
+### 1. Compile the program
+Make sure you have Java installed (JDK 8+).
+
+```bash id="grade_compile"
 javac GradeTracker.java
-3. Run
-java GradeTracker
-
----
-
-##💡 How It Works
-Each student is stored in a text file in this format:
-John:8.5,9,10
-Anna:7,8,9.5
-The app loads data on startup and updates the file whenever:
-A student is registered
-A grade is added
-
----
-
-##📌 Main Functionalities
-Register Student
-
-Enter a name and click Register.
-
-Add Grade
-
-Select a student (by name) and add a grade (4–10 scale).
-
-Search Student
-
-Displays:
-
-All grades
-Total sum
-Average score
-Show All Grades
-
-Displays all students with their grades.
-
-All Averages
-
-Shows average grade per student.
-
----
-
