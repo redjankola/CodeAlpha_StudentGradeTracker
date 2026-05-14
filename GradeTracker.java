@@ -13,9 +13,7 @@ public class GradeTracker extends JFrame {
     private JTextField nota, emriField, kerkimiField;
     private JButton shtoNote, average, notat, regjistroBtn, kerkoBtn;
 
-    private static final String SKEDARI =
-            System.getProperty("user.home") + "/GradeTracker/notat.txt";
-
+    private static final String SKEDARI = //---Enter your desired file path here to store the data---//
     GradeTracker() {
         setTitle("Grade Tracker");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -177,6 +175,8 @@ public class GradeTracker extends JFrame {
         shtoNote.addActionListener(e -> {
             String emri = emriField.getText().trim();
             String teksti = nota.getText().trim();
+            int grade = Integer.parseInt(nota.getText().trim());
+            if(grade > 10 || grade < 4){ showMsg("Grade must be between 4 and 10!"); return; }
             if (emri.isEmpty()) { showMsg("Enter a student name first!"); return; }
             if (teksti.isEmpty()) { showMsg("Enter a grade!"); return; }
             try {
